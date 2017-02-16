@@ -1,0 +1,17 @@
+create table pr_users
+(
+	user_id int unsigned AUTO_INCREMENT PRIMARY KEY,
+    uname varchar(100),
+    pword varchar(255),
+    fname varchar(100),
+    lname varchar(100),
+    email varchar(200)
+)
+create table pr_articles
+(
+    article_id int unsigned AUTO_INCREMENT primary key,
+    user_id int unsigned,
+    title varchar(250),
+    body text,
+    FOREIGN key(user_id) REFERENCES pr_users(user_id)
+)
