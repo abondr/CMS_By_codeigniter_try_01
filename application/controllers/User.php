@@ -2,6 +2,8 @@
 
 class User extends CI_Controller {
     public function index(){
-        echo "boo";
+        $this->load->view("includes/public_header");
+        $this->load->view("user/articles_list");
+        $this->load->view("includes/public_footer");
     }
 }
